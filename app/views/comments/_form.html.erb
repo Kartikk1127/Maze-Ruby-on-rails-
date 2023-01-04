@@ -1,0 +1,18 @@
+
+
+    <div class="commenting" style="font-family:Montserrat;" style="background: blue;">
+    <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+      <%= form.text_field :body, placeholder: "Write a comment" %>
+      <div class="postbutton" ><%= form.submit "" %></div>
+       <%# <div class="commentButton">
+    <%# <button type="button"> %>
+      <%# <%= form.submit "post" %>
+    <%# </button> %>
+    
+      </div>
+<!--        <p>-->
+<!--          <%#= form.label :status %><br>-->
+          <%#= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+<!--        </p>-->
+<% end %>
+  

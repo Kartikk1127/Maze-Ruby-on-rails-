@@ -1,0 +1,99 @@
+<div class="boundary container">
+  <div class="headCont">
+    <h1 style="font-family:Inria Sans;"><%= link_to image_tag("Vector1.png"), articles_path %> <%= link_to image_tag("Maze.png"), articles_path %></h1>
+
+    <div class="Header">
+      <div class="place">
+        <input class="form-control" placeholder="Search for something here..."/>
+      </div>
+    </div>
+
+
+  </div>
+  <!--  <div class="sidenav">-->
+  <div class="csvmainnav">
+    <div class="csvnav">
+      <div class="feed">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("feed.png") %><%= link_to "Feed", articles_path %></button>
+      </div>
+
+      <br>
+
+      <div class="profile">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("profile.png") %><%= link_to "Profile", edit_user_registration_path %></button>
+      </div>
+
+      <br>
+
+
+      <div class="manage">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("profile.png") %><%= link_to "Manage User", users_path %></button>
+      </div>
+      <br>
+
+      <div class="report">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("report.png") %><%= link_to "Reports" %></button>
+      </div>
+
+      <br>
+
+      <div class="logout">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("logarrow.png") %><%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete } %></button>
+      </div>
+    </div>
+
+    <div class="downloadoptions">
+      <div class="allusers">
+        <div class="allusercontent">
+          <br>
+          <div class="icon"><%= image_tag("file.png") %></div>
+<!--            <div class="backclass"><%#= image_tag("back.png")  %></div>-->
+          <br>
+        <div class="userhead">All users</div>
+        <div class="subhead">Post,comments and likes count</div>
+        <br>
+          <input  type="radio" name="download" value="CSV" /> CSV &nbsp;
+          <input  type="radio" name="download" value="CSV" /> EXCEL
+        <div class="downlink"><%= link_to "CSV", users_path(format: :csv), class: "btn btn-primary" %>
+
+        <%= link_to 'EXCEL', users_path(format: :xlsx), class: "btn btn-primary" %></div>
+        </div>
+      </div>
+
+      <div class="morethan3">
+        <div class="morethan3content">
+          <br>
+          <div class="icon"><%= image_tag("file.png") %></div>
+<!--            <div class="backclass"><%#= image_tag("back.png")  %></div>-->
+          <br>
+        <div class="userhead">All users</div>
+        <div class="subhead">Having more than 3 posts</div>
+        <br>
+          <input  type="radio" name="download" value="CSV" /> CSV &nbsp;
+          <input  type="radio" name="download" value="CSV" /> EXCEL
+        <div class="downlink"><%= link_to "CSV", user_downloads_path(format: :csv), class: "btn btn-primary" %>
+        <%= link_to 'EXCEL', user_downloads_path(format: :xlsx), class: "btn btn-primary" %></div>
+        </div>
+      </div>
+
+      <div class="postwise">
+        <div class="postwisecontent">
+          <br>
+          <div class="icon"><%= image_tag("file.png") %></div>
+<!--        <div class="backclass"><%#= image_tag("back.png") %></div>-->
+          <br>
+        <div class="posthead">Postwise Report</div>
+        <div class="subhead">Title/Description,comments,likes</div>
+        <br>
+          <input  type="radio" name="download" value="CSV" /> CSV &nbsp;
+          <input  type="radio" name="download" value="CSV" /> EXCEL
+        <div class="downlink"><%= link_to "CSV", user_post_path(format: :csv), class: "btn btn-primary" %>
+        <%= link_to 'EXCEL', user_post_path(format: :xlsx), class: "btn btn-primary" %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

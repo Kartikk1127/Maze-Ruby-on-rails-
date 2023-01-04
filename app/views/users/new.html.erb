@@ -1,0 +1,119 @@
+<div class="boundary container">
+  <div class="headCont">
+    <h1 style="font-family:Inria Sans;"><%= link_to image_tag("Vector1.png"), articles_path %> <%= link_to image_tag("Maze.png"), articles_path %></h1>
+    <div class="usermanage"><%= image_tag("User Management.png") %></div>
+
+  </div>
+
+  <div class="userroles">
+
+
+    <div class="navigation">
+      <div class="navitems">
+        <div class="feed">
+          <button type="button" class="btn btn-outline-primary"><%= image_tag("feed.png") %><%= link_to "Feed", articles_path %></button>
+        </div>
+
+        <br>
+
+        <div class="profile">
+          <button type="button" class="btn btn-outline-primary"><%= image_tag("profile.png") %><%= link_to "Profile", edit_user_registration_path %></button>
+        </div>
+
+        <br>
+
+
+        <div class="manage">
+          <button type="button" class="btn btn-outline-primary"><%= image_tag("profile.png") %><%= link_to "Manage User", users_path %></button>
+        </div>
+
+        <br>
+
+        <div class="report">
+          <button type="button" class="btn btn-outline-primary"><%= image_tag("report.png") %><%= link_to "Report User" %></button>
+        </div>
+
+        <br>
+
+        <div class="logout">
+          <button type="button" class="btn btn-outline-primary"><%= image_tag("logarrow.png") %><%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete } %></button>
+        </div>
+      </div>
+
+      <div class="addingusers">
+        <%= image_tag("Add Users.png") %>
+
+<!--        <div class="admincontrol"-->
+        <%= form_with url: user_users_create_path, model:@user do |form| %>
+
+          <br>
+
+          <div class="admin_creates_name">
+<!--            <div class="admin_first_name">-->
+              <%#= form.label :First %>
+              <br/>
+              <%= form.text_field :first_name, placeholder: "First" %>
+<!--            </div>-->
+
+<!--            <div class="admin_last_name">-->
+              <%#= form.label :Last %>
+              <br/>
+              <%= form.text_field :last_name, placeholder: "Last" %>
+            </div>
+<!--          </div>-->
+          <br>
+
+          <div class="admin_creates_emailphone">
+<!--            <div class="admin_email">-->
+              <%#= form.label :email %>
+              <br/>
+              <%= form.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+<!--            </div>-->
+
+<!--            <div class=admin_phone">-->
+              <%#= form.label :number %>
+              <br/>
+              <%= form.text_field :phone, placeholder: "Phone" %>
+<!--            </div>-->
+          </div>
+
+          <br>
+
+          <div class="admin_creates_pass">
+<!--            <div class="admin_password">-->
+              <%#= form.label :password %>
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br/>
+              <%= form.password_field :password, placeholder: "Password", autocomplete: "new-password" %>
+<!--            </div>-->
+          </div>
+
+          <div class="admin_creates_roles">
+            <%#= form_with(model: @user) do |form| %>
+            <%#= form.collection_check_boxes :role_ids, Role.all, :id, :name %>
+            <%#= @user.errors[:roles] %>
+            <p class="flash"><%= flash.notice %></p>
+            <%= form.submit "Create user" %>
+
+            <%# end %>
+          </div>
+          </div>
+        <% end %>
+
+
+          </div>
+
+          </div>
+
+
+          </div>
+
+
+
+
+
+
+
+<!--        </div>-->
+

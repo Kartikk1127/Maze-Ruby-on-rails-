@@ -1,0 +1,77 @@
+<!--<div class="col">-->
+<div class="Header">
+  <div class="headCont">
+    <h1 style="font-family:Inria Sans;"><%= link_to image_tag("Vector1.png"), articles_path %> <%= link_to image_tag("Maze.png"), articles_path %></h1>
+    <div class="place">
+      <input class="form-control" placeholder="Search for something here..."/>
+    </div>
+  </div>
+
+
+</div>
+
+
+  <div class="Main_Body">
+    <div class="nestedmain">
+    <div class="mainn">
+
+
+
+    <%# dropdown hai ye %>
+      <div class="dropdown">
+        <button class="dropbtn">...</button>
+        <div class="timestamp"><%= time_ago_in_words(@article.created_at) %> ago</div>
+        <div class="dropdown-content">
+          <%= link_to "Edit", edit_article_path(@article) %>
+          <%= link_to "Destroy", article_path( @article), data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+          } %>
+        </div>
+      </div>
+    <%# dropdown khtm %>
+<div class="showcomments"><%= @article.body %></div>
+    <br>
+    <div class="noofcomments">1 like |
+      <%= @article.comments.size %>&nbsp;comments</div>
+
+    <hr>
+
+
+
+
+
+<h2>Comments</h2>
+    <hr>
+<% @article.comments.each do |comment| %>
+
+
+        <div class="commentinguser"><%= comment.user.first_name %> :
+  <div class="commentbody">
+    <%= comment.body %>
+    <div class="timestamp">Posted <%= time_ago_in_words(comment.created_at) %> ago</div>
+    <div class="downn">
+<!--      <button class="dropbtncomment">...</button>-->
+      <div class="dropdown-content-comment">
+        <%= link_to "Delete", article_comment_path(comment.article, comment), remote: true, data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure to delete the comment?"
+        } %>
+      </div>
+    </div>
+
+    <hr>
+
+
+
+  </div>
+        </div>
+<% end %>
+
+      <div class="commentform"><%= render 'comments/form' %></div>
+
+
+</div>
+  </div>
+  </div>
+<!--</div>-->

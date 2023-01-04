@@ -1,0 +1,38 @@
+<%= form_with model: article do |form| %>
+
+<%# <div>
+    <%= form.label :title %><br>
+    <%# <%= form.text_field :title %>
+    <%# <% article.errors.full_messages_for(:title).each do |message| %> 
+      <%# <div><%= message %>
+    <%# <% end %>
+  <%# </div>   %>
+  <div>
+    <div class="poststatus">
+<!--      <%#= form.label :status %><br>-->
+      <%= form.select :status, ['public', 'private'], selected: 'public' %>
+    </div>
+  <div class="body">
+    <%# <%= form.label :body %>
+
+    <div class="box">
+    <%= form.text_field :body, placeholder: "What's happening?" %>
+    </div>
+    <br>
+    <br>
+    <div class="subtexts">
+      <%=image_tag("videoIcon.png")%>
+     <div class="livevideo">Live video</div>
+    <div class="photo"><%=image_tag("photoIcon.png")%>Photo/Video</div>
+    <div class="feeling"><%=image_tag("smileyIcon.png")%>Feeling</div>
+    </div>
+    <% article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+
+  </div>
+    <div class="button">
+      <%= form.submit "post" %>
+    </div>
+  </div>
+<% end %>

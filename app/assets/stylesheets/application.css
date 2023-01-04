@@ -1,0 +1,978 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= requre bootstrap
+ *= require_tree .
+ *= require_self
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+ .button
+ {
+    color: blue;
+    border-radius: 10px;
+ }
+ .Header
+ {
+     display: flex;
+     /* background: forestgreen; */
+     /* left: 0%; */
+     /* right: 75%; */
+     /* margin: 0px 0px 0px 170px; */
+     /* position: relative; */
+     font-family: 'Inria Sans';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 12px;
+     line-height: 34px;
+     letter-spacing: 0.03em;
+     color: #606165;
+     justify-content: space-around;
+     margin-left: 75px;
+ }
+
+
+ .hello
+ {
+   /*background: #E5E5E5;*/
+     width: 1160px;
+     margin-left: -18px;
+ }
+
+ .hellomaze
+ {
+     width: 1116px;
+     margin-left: 10px;
+ }
+ .contentt
+ {
+    background: #FFFFFF;
+   border-style: solid;
+   border-width: 1px;
+   border-color: lightgrey;
+   border-radius: 14px;
+     width: 95%;
+     font-family: Montserrat;
+     margin: auto;
+ }
+
+ .headCont{
+
+     width: 1115px;
+     display: flex;
+
+ }
+
+ .poststatus select
+ {
+     margin: 0px 0px 0px -65px;
+ }
+
+ .commentinguser
+ {
+     font-family: auto;
+ }
+
+ .dropdown button
+ {
+     background: #FFFFFF;
+ }
+ /* .searching
+ {
+    box-sizing: border-box;
+
+position: absolute;
+width: 761px;
+height: 50px;
+left: 300px;
+top: 20px;
+
+border: 1px solid rgba(51, 51, 51, 0.3);
+border-radius: 14px;
+ } */
+.place
+{
+    width: 780px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+ .place input
+ {
+     border-radius: 14px;
+     border-color: grey;
+     width: 85%;
+     height: 85%;
+     margin-left: 50px;
+   /*text-align: center;*/
+   /* !* box-sizing: border-box; *!*/
+   /* position: absolute;*/
+   /* border-radius: 14px;*/
+   /* border-color: grey;*/
+   /* width: 40%;*/
+   /* height: 80%;*/
+   /* left: 300px;*/
+   /* top: 2px;  */
+ }
+
+ .box
+ {
+     height: 55px;
+ }
+
+ .box input
+ {
+    position: relative;
+    padding: 10px;
+    border-radius: 14px;
+    /* width: 60%; */
+    width: 92%;
+    height: 7%;
+    left: 30px;
+    top: 18px;  
+    background: #F5F6F8;
+     border-color: lightgrey;
+     height: 70px;
+ }
+
+ .button
+ {
+    position: relative;
+    padding: 0px 715px;
+    padding-bottom: 10px;
+ }
+
+ .button input
+ {
+     margin: 0px 0px 0px -40px;
+   color: white;
+   height: 35px;
+   width: 76px;
+   background: blue;
+   border-radius: 5px;
+ }
+
+ .commenting input
+ {
+    width: 85%;
+    height: 50px;
+    left: 30px;
+    top: 18px;  
+    border-radius: 14px;
+     border-color: lightgrey;
+ }
+
+ .body
+ {
+   /* width: 1041px; */
+   width: 88%;
+   margin: 0px 100px 0px 50px;
+/* height: 165px; */
+height: 50%;
+left: 300px;
+top: 125px;
+ }
+
+ .content
+ {
+   margin: 0px 182px 0px 0px;
+ }
+
+ .title
+ {
+   text-decoration-color: #606165;
+   color: #606165;
+ }
+
+ .art
+ {
+   background-color: #FFFFFF;
+   width: 70%;
+   border-radius: 14px;
+   /* height: 376px; */
+   line-height: 21px;
+   font-size: 14px;
+   font-weight: bolder;
+   color: #606165;
+   font-style: normal;
+   margin-left: 100px;
+   border-style: solid;
+   border-color: lightgrey;
+ }
+
+ .comm 
+ {
+   margin: 0px 0px 0px 0px;
+   /* width: 800px; */
+ }
+ 
+.Full
+{
+   background: aqua;
+   width: 1335px;
+   border-radius: 20px;
+   top: -462px;
+   left: -1575px;
+}
+ 
+.posts
+{
+   /* height: 1991px;
+    margin: 0px 182px 0px 159px; */
+
+    width: 100%;
+    margin: auto;
+    background: grey;
+}
+.posts ul li 
+{
+   color: #606165;
+}
+
+.kartik2{
+width:70%;
+border-radius:24px;
+border:#606165;
+}
+
+.subheading
+{
+   /* margin-left: -90px; */
+   width: 95%;
+   margin: 0px 0px 0px 20px;
+   border-radius: 14px;
+   border-width: 1px;
+   border-style: solid;
+   background: #FFFFFF;
+   border-color: lightgrey;
+}
+
+.subimage
+{
+    padding: 10px;
+}
+
+.Main_Body
+{
+   background-color: #F5F6F8;
+    margin: 0px 0px 0px 135px;
+   width: 73%;
+   border-radius: 14px;
+}
+
+.usermain
+{
+    margin: 30px 0px 0px 350px;
+    width: 73%;
+    border-radius: 14px;
+}
+
+.userroles
+{
+    display: flex;
+}
+
+.interface
+{
+    width: 1100px;
+    margin-left: 47px;
+    margin-top: -275px;
+}
+
+.sidenav
+{
+    /*width: 20%;*/
+    /*margin: -337px 0px 0px -375px;*/
+    /*height: 330px;*/
+}
+
+.logout
+{
+    width: 144px;
+}
+
+.btn-outline-primary
+{
+    border-color: white;
+}
+
+
+
+.commentButton
+{
+   width: 57px;
+}
+
+.commentButton input{
+   color: white;
+}
+
+.boundary
+{
+   background: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.backclass img
+{
+    margin-left: 20px;
+}
+
+.heading
+{
+   font-family: 'Montserrat';
+}
+
+.info
+{
+   font-family: 'Montserrat';
+   margin: 0px 5px 0px 5px;
+}
+
+.likecomment
+{
+   margin-left: 15px;
+   display: flex;
+}
+
+.commenting{
+   margin-left: 15px;
+}
+
+.commenting input
+{
+    background: #F5F6F8;
+}
+
+.commentButton
+{
+   margin: -45px 0px 13px 0px;
+   margin-left: 752px;
+}
+
+.commentButton input
+{
+   background: blue;
+   border-radius: 5px;
+}
+
+.showcomments
+{
+   font-size: 14px;
+}
+
+.noofcomments
+{
+   margin-left: 70px;
+   /*font-weight: 100px;*/
+   font-size: 12px;
+}
+
+.dropdown
+{
+   margin-left: -115px;
+   /*margin-top: -4%;*/
+   /*position: relative;*/
+   /*display: inline-block;*/
+   /* widows: 842px;*/
+   /* border: 1px solid;*/
+    /* margin-left: 755px; */
+    margin-top: -2%;
+    position: relative;
+    display: inline-block;
+    width: 47px;
+    height: 50px;
+    }
+
+
+
+.dropdown button
+{
+    height: 10px;
+    background: #FFFFFF;
+
+}
+
+.dropbtn {
+   /* background-color: #04AA6D; */
+   color: black;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+
+ .dropdown-content {
+   display: none;
+   /*position: absolute;*/
+   background-color: #f1f1f1;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+     /*left: 700px;*/
+     bottom: -15px;
+     position: absolute;
+     left: 628px;
+ }
+
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: inline-block;
+ }
+
+ .dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+.timestamp
+{
+   display: inline-block;
+   font-size: 10px;
+   font-weight: 300;
+   font-style: italic;
+}
+
+.commentimage
+{
+   margin-left: 110px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.likeimage
+{
+   margin-top: 10px;
+   display:flex;
+}
+
+.likecomment
+{
+   margin-left: 25px;
+}
+
+.liketext
+{
+   margin-left: 2px;
+   color: darkslategrey;
+}
+
+.commenttext a{
+text-decoration: none;
+color: darkslategrey;
+}
+
+.commenttext{
+   margin-left: 2px;
+}
+ 
+
+.postbutton input
+{
+   background: blue;
+   color: white;
+   border-radius: 5px;
+    margin-left: 670px;
+}
+
+.postbutton
+{
+    margin-top: 0px;
+}
+
+.curruser
+{
+    display: flex;
+    width: 130px;
+    margin-left: 1030px;
+    margin-top: -40px;
+}
+
+.postbutton input{
+    border: none;
+    width: 35px;
+    height: 35px;
+    background: #CDF0EA;
+    background: url("commentarrow.png");
+    background-repeat: no-repeat;
+    /*margin-left: 735px;*/
+    background-position: center;
+}
+
+.backclass img
+
+{
+/*position: relative;*/
+    position: absolute;
+    /*left: 26px;*/
+    /*top: 389px;*/
+    top: 93px;
+    left: 397px;
+
+}
+
+.icon img
+{
+    width: 65px;
+    height: 60px;
+}
+
+.createroles
+{
+    margin-left: 752px;
+}
+
+.subhead
+{
+    font-size: x-small;
+}
+
+.sign_in_page
+{
+    background-image: url("login background.png");
+    width: 1489px;
+    height: 800px;
+}
+
+.usermanage
+{
+    margin-left: 10%;
+    margin-top: 2%;
+
+}
+
+.userindexlist
+{
+    width: 1008px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deactive button:not(:disabled)
+{
+    background: #F56464 15%;
+    color: #F56464;
+    border-radius: 14px;
+    /* background: #F56464; */
+    border: none;
+    background: #F564;
+    width: 132px;
+}
+
+.activebutton button:not(:disabled)
+{
+    background: lightgreen;
+    border: none;
+    border-radius: 14px;
+    color: darkgreen;
+    width: 132px;
+}
+
+.listofusers
+{
+    margin: -200px 0px 0px -100px;
+}
+
+.addingusers
+{
+    /*margin: -200px 0px 0px -100px;*/
+    padding: 70px;
+    background: #e5e5e5;
+}
+
+.noofcomments
+{
+    margin-left: 10px;
+}
+
+.subtexts
+{
+    display: flex;
+    font-size: smaller;
+}
+
+.button input
+{
+    border: none;
+}
+
+.photo
+{
+    margin-left: 150px;
+}
+
+.feeling
+{
+    margin-left: 150px;
+}
+
+.userlist
+{
+    width: 12%;
+    /* margin: auto; */
+    /* justify-content: right; */
+    /* text-align: right; */
+    /*margin-left: 965px;*/
+    /*margin: auto;*/
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.usernames
+{
+    font-family: auto;
+    /*display: flex;*/
+}
+
+.dropbtn
+{
+    margin-left: 670px;
+}
+
+.postbutton
+{
+    margin-top: -45px;
+}
+
+.mainn
+{
+    height: 440px;
+}
+
+.commentbody
+{
+    margin-left: 17px;
+}
+
+.timestamp
+{
+    /*margin-left: 750px;*/
+    margin-left: 125px;
+    width: 140px;
+}
+
+.downn button
+{
+    display: contents;
+}
+
+.mostrecent
+{
+    margin-left: 15px;
+    font-family: system-ui;
+    color: darkslategrey;
+}
+
+.commenting
+{
+    display: inline-block;
+}
+
+.nestedmain
+{
+    height: 407px;
+}
+
+.dropdown-content-comment a
+{
+    font-family: auto;
+    text-decoration: none;
+    color: lightslategray;
+}
+
+.editlink a{
+    text-decoration: none;
+    color: lightslategray;
+    font-family: auto;
+}
+
+.feed a:hover
+{
+    color: white;
+}
+
+.feed a
+{
+    text-decoration: none;
+}
+
+.profile a:hover
+{
+    color: white;
+}
+
+.profile a
+{
+    text-decoration: none;
+}
+
+.manage a:hover
+{
+    color: white;
+}
+
+.manage a
+{
+    text-decoration: none;
+}
+
+.logout a:hover
+{
+    color: white;
+}
+
+.logout a
+{
+    text-decoration: none;
+}
+
+.currentuser
+{
+    font-size: x-large;
+    font-family: auto;
+    margin-left: 25px;
+    width: 60px;
+}
+
+.usertitle
+{
+    display: flex;
+}
+
+.poststatus
+{
+    width: 90px;
+    margin: -60px 0px 0px 734px;
+}
+
+.admin_creates_emailphone
+{
+    display: flex;
+}
+
+.admin_creates_emailphone input
+{
+    border: none;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+.admin_creates_name
+{
+    display: flex;
+}
+
+.admin_creates_name input
+{
+    border: none;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+.admin_creates_pass
+{
+    display: flex;
+}
+
+.admin_creates_pass input
+{
+    border: none;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+.navigation
+{
+    display: flex;
+}
+
+.admin_creates_roles input
+{
+    margin-left: 500px;
+    width: 344px;
+    height: 39px;
+    width: 173px;
+    border-radius: 14px;
+    border: navajowhite;
+    background: blue;
+    color: white;
+}
+
+.admin_submits input
+{
+    height: 39px;
+    width: 173px;
+    border-radius: 14px;
+    border: navajowhite;
+    background: blue;
+    color: white;
+}
+
+.iconwithname
+{
+    width: 135px;
+}
+
+.userphone
+{
+    width: 100px;
+    margin-left: -20px;
+}
+
+.useremail
+{
+    width: 215px;
+    margin-left: -75px;
+}
+
+.userandmain
+{
+    display: flex;
+}
+
+.likepng button:not(:disabled)
+{
+    border: none;
+    background: none;
+}
+
+.likepng button
+{
+    border: none;
+}
+
+.likepng
+{
+    display: flex;
+}
+
+.report a
+{
+    text-decoration: none;
+}
+
+.report a:hover
+{
+    color: white;
+}
+
+.csvmainnav
+{
+    display: flex;
+}
+
+.downlink a
+{
+    text-decoration: none;
+}
+
+.downloadoptions
+{
+    display: flex;
+    margin-left: 90px;
+}
+
+.allusers
+{
+    /*margin-left: 90px;*/
+    height: 246px;
+    width: 239px;
+    background: #FFF;
+    /*top: ;*/
+    border-radius: 31px;
+    /*background: ;*/
+    background: #F5F6F8;
+}
+.alltheusers
+{
+
+}
+
+.morethan3
+{
+    margin-left: 90px;
+    height: 246px;
+    width: 239px;
+    background: #FFF;
+    top: ;
+    border-radius: 31px;
+    background: ;
+    background: #F5F6F8;
+}
+
+.postwise
+{
+    margin-left: 90px;
+    height: 246px;
+    width: 239px;
+    background: #FFF;
+    top: ;
+    border-radius: 31px;
+    background: ;
+    background: #F5F6F8;
+}
+
+.allusers
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.allusercontent image
+{
+    margin-left: 27px;
+}
+
+.img, svg
+{
+    margin-left: 27px;
+}
+.morethan3
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.postwise
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.userhead
+{
+    margin-left: 35px;
+}
+
+.posthead
+{
+    margin-left: 10px;
+}
+
+.allusercontent img
+{
+    margin-left: 27px;
+}
+
+.morethan3content img
+{
+    margin-left: 27px;
+}
+
+.postwisecontent img
+{
+    margin-left: 27px;
+}

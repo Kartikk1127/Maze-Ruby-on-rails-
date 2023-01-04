@@ -1,0 +1,2 @@
+class AddFieldsToUser < ApplicationRecord
+end

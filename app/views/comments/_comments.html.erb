@@ -1,0 +1,7 @@
+<% unless comment.archived? %>
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+  <%# <%= render 'comments/form', article: @article %> 
+</p>
+<% end %>

@@ -1,0 +1,276 @@
+<% flash.each do |name,msg| %>
+  <div class="alert alert-<%= name %>"><%= msg %></div>
+<% end %>
+
+
+<%#= t "users.first_name" %>
+
+<div class="boundary container">
+  <div class="hello">
+    <div class="hellomaze">
+
+
+      <div class="headCont">
+        <h1 style="font-family:Inria Sans;"><%= link_to image_tag("Vector1.png"), articles_path %> <%= link_to image_tag("Maze.png"), articles_path %></h1>
+
+      </div>
+      <div class="curruser"><span><%= current_user.first_name %> <%= current_user.last_name %>
+      <%=  "(Admin)" if current_user.has_role? :admin %>
+      </span></div>
+
+      <br>
+
+      <div class="feed">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("feeeed.png") %><%= link_to "Feed", articles_path %></button>
+      </div>
+
+      <br>
+
+      <div class="profile">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("profile.png") %><%= link_to "Profile", edit_user_registration_path %></button>
+      </div>
+
+      <br>
+
+      <% if current_user.has_role? :admin %>
+      <div class="manage">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("mng.png") %><%= link_to "Manage User", users_path %></button>
+      </div>
+
+        <br>
+
+        <div class="report">
+          <button type="button" class="btn btn-outline-primary"><%= image_tag("report.png") %><%= link_to "Reports", user_downloads_path(@users) %></button>
+        </div>
+        <% end %>
+
+      <br>
+
+      <div class="logout">
+        <button type="button" class="btn btn-outline-primary"><%= image_tag("logarrow.png") %>
+          <%= link_to "Logout", destroy_user_session_path, 'data-turbo-method': :delete %></button>
+      </div>
+
+      <div class="interface">
+        <div class="Header">
+          <div class="place">
+            <input class="form-control" placeholder="Search for something here..."/>
+          </div>
+        </div>
+        <br>
+        <div class="userandmain">
+
+
+
+        <div class="Main_Body">
+          <br>
+          <div class="subheading">
+            <div class="subimage"><%= image_tag("Vector1.png") %></div>
+            <%= render "form", article: @articles1 %>
+          </div>
+
+          <br>
+
+
+          <% @articles.each do |article| %>
+            <%# unless article.private? %>
+            <%# unless article.archived? %>
+
+
+
+            <% if current_user.has_role? :admin %>
+              <% if article.status == "public" || article.status == "private" %>
+                <div class="contentt" style="font-family:Montserrat;">
+                  <div class="card-body">
+
+                    <div class="usertitle">
+                      <%= image_tag("Vector1.png") %>
+
+
+                      <div class="currentuser"> <%= article.user.first_name %> </div>
+
+
+                      <%# dropdown hai ye %>
+                      <div class="dropdown">
+                        <button class="dropbtn">...</button>
+
+                        <div class="dropdown-content">
+                          <%= link_to "Edit", edit_article_path(article) %>
+                          <%= link_to "Destroy", article_path(article), data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "Are you sure?"
+                          } %>
+                        </div>
+
+                      </div>
+                      <%# dropdown khtm %>
+                    </div>
+
+                    <div class="timestamp"><%= time_ago_in_words(article.created_at) %> ago ,
+                      <span><%= article.status %></span></div>
+
+                    <br>
+
+                    <div class="card-text" style=" font-weight: 300;  font-family: system-ui; font-size: 14px;">
+
+                      <hr>
+
+                      <%= article.body %>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="noofcomments"> <p><%= article.likes.count %> <%= (article.likes.count) == 1 ? 'Like' : 'Likes'%> |
+                      <%= article.comments.size %>&nbsp;comments </p>
+                    </div>
+
+                    <hr>
+
+                    <div class="likecomment">
+                      <div class="likeimage">
+                        <% pre_like = article.likes.find { |like| like.user_id == current_user.id} %>
+                        <% if pre_like %>
+                        <div class="likepng"><%= image_tag("like.png") %>
+                          <%= button_to 'Unlike', article_like_path(article, pre_like), method: :delete %></div>
+                        <% else %>
+                          <div class="likepng"><%= image_tag("like.png") %><%= button_to 'Like', article_likes_path(article), method: :post %></div>
+                        <% end %>
+
+
+                      </div> &nbsp;&nbsp;&nbsp;
+
+                      <div class="commentimage">
+                        <%= image_tag("comment.png") %>
+                        <div class="commenttext"><%= link_to "Comments", article, data: { turbolinks: false }, :method => "get" %></div>
+                      </div>&nbsp;&nbsp;&nbsp;
+                    </div>
+
+                    <hr>
+
+                    <br>
+
+                    <div class="comm">
+                      <% @article = article %>
+                      <%= render 'comments/form' %>
+                    </div>
+
+                    <hr>
+
+                    <div class="mostrecent"><%= current_user.first_name %>
+                      : <%= article.comments.order("created_at DESC").first&.body %></div>
+
+                  </div>
+                </div>
+
+              <% end %>
+
+            <% else %>
+                 <% if current_user.id == article.user_id || article.status == "public" %>
+                <div class="contentt" style="font-family:Montserrat;">
+                  <div class="card-body">
+
+                    <div class="usertitle">
+                      <%= image_tag("Vector1.png") %>
+                      <div class="currentuser"> <%= article.user.first_name %> </div>
+
+                      <%# dropdown hai ye %>
+                      <div class="dropdown">
+                        <button class="dropbtn">...</button>
+                        <div class="dropdown-content">
+                          <%= link_to "Edit", edit_article_path(article) %>
+                          <%= link_to "Destroy", article_path(article), data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "Are you sure?"
+                          } %>
+                        </div>
+                      </div>
+                      <%# dropdown khtm %>
+                    </div>
+
+                    <div class="timestamp"><%= time_ago_in_words(article.created_at) %> ago ,
+                      <span><%= article.status %></span></div>
+
+
+                    <br>
+
+                    <div class="card-text" style=" font-weight: 300;  font-family: system-ui; font-size: 14px;">
+                      <hr>
+                      <%= article.body %>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="noofcomments"><%= article.likes.count %> <%= (article.likes.count) == 1 ? 'Like' : 'Likes'%> |
+                      <%= article.comments.size %>&nbsp;comments
+                    </div>
+
+                    <hr>
+
+                    <div class="likecomment">
+                      <div class="likeimage">
+                        <div class="likepng"></div>
+                        <% pre_like = article.likes.find { |like| like.user_id == current_user.id} %>
+                        <% if pre_like %>
+                          <div class="likepng"><%= image_tag("like.png") %>
+                            <%= button_to 'Unlike', article_like_path(article, pre_like), method: :delete %></div>
+                        <% else %>
+                          <div class="likepng"><%= image_tag("like.png") %><%= button_to 'Like', article_likes_path(article), method: :post %></div>
+                        <% end %>
+                      </div> &nbsp;&nbsp;&nbsp;
+                      <div class="commentimage">
+                        <%= image_tag("comment.png") %>
+                        <div class="commenttext"><%= link_to "Comments", article, data: { turbolinks: false }, :method => "get" %></div>
+                      </div>&nbsp;&nbsp;&nbsp;
+                    </div>
+
+                    <hr>
+
+                    <br>
+
+                    <div class="comm">
+                      <% @article = article %>
+                      <%= render 'comments/form' %>
+                    </div>
+
+                    <hr>
+
+                    <div class="mostrecent">
+                      <%= article.comments.order("created_at DESC").first&.body %></div>
+
+                  </div>
+                </div>
+
+              <% end %>
+
+            <% end %>
+
+
+
+            <%# end %>
+
+            <br>
+
+          <% end %>
+        </div>
+
+          <% if current_user.has_role? :admin %>
+            <div class="userlist">
+              <div class="alluserss"><%= image_tag("Users List.png") %></div>
+              <br>
+              <% @users.each do |user| %>
+                <% if user.articles.present? %>
+                <div class="usernames"><%= image_tag("mazesmall.png") %>&nbsp;<%= user.first_name %><%= user.last_name %></div>
+                  <br>
+
+                  <% end %>
+              <% end %>
+          <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,336 @@
+.signupp
+{
+    left: -50px;
+    height: 670px;
+    width: 100%;
+    background-image: url("login background.png");
+}
+
+.sign_in_page
+{
+    left: -50px;
+    height: 676px;
+    width: 100%;
+    background-image: url("login background.png");
+}
+
+.sign_in_page
+{
+    height: 676px;
+}
+
+.heading h1
+{
+    font-size: 30px;
+    color: white;
+}
+
+.nestedsign
+{
+    width: 1137px;
+    margin: auto;
+    border-radius: 16px;
+    background: #0dcaf0;
+    height: 565px;
+    background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(42px);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nestedogin
+{
+    margin: 0px 0px 0px 368px;
+    width: 460px;
+}
+
+.allfieldsinlogin
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 475px;
+    border-radius: 16px;
+    background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(42px);
+    width: 458px;
+}
+
+.field label
+{
+    color: white;
+}
+
+.login h2
+{
+    color: white;
+}
+
+.linee
+{
+    color: #EFF5FF;
+}
+
+.field_input_last
+{
+    width: 256px;
+}
+
+.field_input_last input
+{
+    border-radius: 14px;
+    border: none;
+}
+
+.field_input_last label
+{
+    color: #F9FAFB;
+;
+}
+
+.field_input_first
+{
+    width: 256px;
+}
+.field_input_first input
+{
+    border-radius: 14px;
+    border: none;
+}
+
+.field_input_first label
+{
+    color: #F9FAFB;
+}
+
+.field_email
+{
+    width: 256px;
+}
+
+.field_email input
+{
+    border-radius: 14px;
+    border: none;
+}
+
+.field_email label
+{
+    color: #F9FAFB;
+}
+
+.field_phone
+{
+    width: 256px;
+}
+
+.field_phone input
+{
+    border-radius: 14px;
+    border: none;
+}
+
+.field_phone label
+{
+    color: white;
+}
+
+.field_password
+{
+    width: 256px;
+}
+
+.field_password input
+{
+    border-radius: 14px;
+    border: none;
+}
+
+.field_password
+{
+    color: #F9FAFB;
+}
+
+.field_pass_confirm
+{
+    width: 256px;
+}
+
+.field_pass_confirm input
+{
+    border-radius: 14px;
+    border: none;
+}
+
+.field_pass_confirm
+{
+    color: #F9FAFB;
+}
+
+
+.names
+{
+    display: flex;
+}
+
+.emailphone
+{
+    display: flex;
+}
+
+.pass
+{
+    display: flex;
+}
+
+.createaccount
+{
+    margin-left: 354px;
+}
+
+.business
+{
+    margin-left: 354px;
+}
+
+.names
+{
+    margin-left: 349px;
+}
+
+.emailphone
+{
+    margin-left: 349px;
+}
+
+.pass
+{
+    margin-left: 349px;
+}
+
+.field_input_last
+{
+    margin-left: 32px;
+}
+
+.field_phone
+{
+    margin-left: 32px;
+}
+
+.field_pass_confirm
+{
+    margin-left: 32px;
+}
+
+.actions_sign
+{
+    width: 228px;
+    margin: 50px 0px 0px 349px;
+}
+
+.loginbutton
+{
+    display: flex;
+}
+
+.actions_sign input
+{
+    color: white;
+    height: 45px;
+    width: 175px;
+    background: blue;
+    border: none;
+    border-radius: 5px;
+}
+
+.actions_login input
+{
+    height: 40px;
+    width: 178px;
+    background: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 22px 0px 0px;
+}
+
+.actions_login a
+{
+    display: flex;
+}
+
+.olduser
+{
+    color: white;
+    display: flex;
+}
+
+.olduser a
+{
+    text-decoration: auto;
+}
+
+.newuser
+{
+    color: white;
+}
+
+.newuser a
+{
+    text-decoration: none;
+}
+
+.passwordgeneration
+{
+    left: -50px;
+    height: 676px;
+    width: 100%;
+    background-image: url("login background.png");
+}
+
+.forgetpass
+{
+    color: white;
+}
+
+.nestedpass
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 475px;
+    border-radius: 16px;
+    background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(42px);
+    width: 458px;
+    margin-left: 368px;
+}
+
+.actions input
+{
+    background: blue;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    height: 40px;
+}
+
+.renderpass
+{
+    display: contents;
+
+}
+
+.renderpass a
+{
+    text-decoration: none;
+}

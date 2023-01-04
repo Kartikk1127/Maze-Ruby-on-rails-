@@ -1,0 +1,51 @@
+<div class="sign_in_page" >
+  <div class="heading">
+    <h1 style="font-family:Inria Sans;"><%= image_tag("Vector1.png") %> <%= image_tag("Maze (1).png") %></h1>
+  </div>
+  <div class="linee">
+    <hr>
+  </div>
+
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="nestedogin">
+    <div class="allfieldsinlogin">
+      <div class="login"><h2>Login</h2></div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+      <br>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+      <br>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+      <br>
+
+  <div class="actions_login">
+    <%= f.submit "Login" %>
+  </div>
+
+      <br>
+
+      <div class="newuser">Don't have an account?
+        <%= render "devise/shared/links" %></div>
+      </div>
+    </div>
+<% end %>
+
+
+</div>
